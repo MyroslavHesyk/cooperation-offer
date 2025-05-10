@@ -55,6 +55,33 @@
             height: 100px;
             background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 50 Q 50 65 100 50 L 100 100 L 0 100" fill="%23264653"/></svg>');
         }
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .header-image {
+            width: 150px;
+            height: auto;
+           
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header-text {
+            flex: 1;
+        }
+        
+        .decorative-line {
+            height: 2px;
+            background: var(--accent);
+            width: 100px;
+            margin: 1rem 0;
+        }
+        
+       
 
         h1 {
             font-family: 'Source Code Pro', monospace;
@@ -173,6 +200,7 @@
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 2rem;
+            text-align: justify;
         }
 
         .accent-text {
@@ -274,6 +302,7 @@
             background: rgba(var(--primary-rgb), 0.1);
             padding: 1.5rem;
             border-radius: 10px;
+            
         }
 
         .cooperation-block p {
@@ -320,7 +349,40 @@
         .cta-button:active {
             transform: translateY(1px);
         }
-
+        .lesson-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .lesson-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .lesson-link i {
+            color: var(--accent);
+            width: 20px;
+            text-align: center;
+        }
+        
+        .lesson-link:hover {
+            background: rgba(42, 157, 143, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-color: var(--primary);
+        }
+        
+     
         footer {
             text-align: center;
             padding: 2rem;
@@ -346,4 +408,42 @@
             header {
                 padding: 2rem 1rem;
             }
+
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .header-image {
+                width: 100px;
+                margin-bottom: 1rem;
+            }
+            
+            .header-text {
+                text-align: center;
+            }
+            
+            .decorative-line {
+                margin: 1rem auto;
+            }
+
+            .glass-container {
+               
+                padding: 1rem;
+                margin: 0.5rem;
+            }
+            .lesson-links {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+                
+            }
+
+            footer p {
+                font-size: 1rem;
+            }
+           
         }
